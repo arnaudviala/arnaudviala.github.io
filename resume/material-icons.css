@@ -44,7 +44,7 @@
 .ico-school::after {    content: "school"; }
 .ico-business::after {  content: "business"; }
 .ico-forward::after {   content: "forward"; }
-.ico-share::after {     content: "share"; }
+.ico-links::after {     content: "share"; }
 .ico-blank::after {     content: "email"; opacity: 0.0; visibility: hidden; }
 
 /* Class "w-ico-next"    see material-icons.css
