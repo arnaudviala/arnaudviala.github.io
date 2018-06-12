@@ -315,6 +315,10 @@ section h4 ,
   width: 5.5em;
 }
 
+h4.languages {
+  margin-top: 1.1cm;
+}
+
 #studies > .study ~ .study { /* apply to all .study elements except first one */
   margin-top: 0.25cm;
 }
