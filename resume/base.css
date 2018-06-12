@@ -1,0 +1,43 @@
+/* an <li> element with class="sep" is just a separator
+ * some other CSS might decorate by changing its height, display a line
+ * but the strict minimum is to hide the bullet and the content */
+li.sep {
+  visibility:hidden;
+}
+
+
+/* When a <label> is inside a <li>, mostly we need some space
+ *  right after the label
+ */
+li label {
+  margin-right: 1ex;
+}
+
+
+/* Classes to highlight some elements */
+.todo {
+  color: red;
+}
+.todel {
+  color: #FF00FF;
+}
+.toadapt {
+  color:#008800;
+}
+
+
+/* Modify the default style for links
+ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* A <div class="pagebreak"> is taken care of only when printing */
+div.pagebreak {
+  display: none;
+}
+

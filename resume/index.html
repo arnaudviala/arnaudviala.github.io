@@ -1,9 +1,404 @@
 <html>
 <head>
-<title>Resume - Arnaud Viala</title>
+<meta charset="UTF-8" />
+
+<!-- very basic CSS rules (common to everything) -->
+<link rel="stylesheet" type="text/css" href="base.css">
+
+<link rel="stylesheet" type="text/css" href="w-style.css">
+
+<!--  -->
+<link rel="stylesheet" type="text/css" href="font-roboto.css"
+      oldhref="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+
+<link rel="stylesheet" type="text/css" href="material-icons.css"
+      oldhref="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" type="text/css" href="paging.css">
+<link rel="stylesheet" type="text/css" href="canada.css">
+<link rel="stylesheet" type="text/css" href="printing-letter.css" media="print">
+<link rel="stylesheet" type="text/css" href="printing.css" media="print">
+
+<!-- Decide what to show or hide in 'showhide.css' -->
+<link rel="stylesheet" type="text/css" href="showhide.css">
+
+<!-- the title is used to create a default name when printing to PDF -->
+<title>Resume_ArnaudViala</title>
+
+<script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+
+<script type="text/javascript">
+var page_counter = 1;
+function populate_header()
+{
+  page_counter++;
+  var name = $('#name').text();
+  var jobtitle = $('#job #title').text();
+  var pagenb = "page "+page_counter;
+  var o = $('<div>')
+  .addClass("page-header flexbox")
+  .append( $('<span class="name">').text(name) )
+  .append( $('<span class="jobtitle">').text(jobtitle) )
+  .append( $('<span class="page-nb">').text(pagenb) );
+  // get html code using a parent dummy container
+  var html = $('<div>').append(o).html();
+  return html;
+}
+</script>
 </head>
 <body>
-<center>(Coming soon)</center>
+
+<div class="page page-us">
+
+<header>
+  <h1 id="name">
+    <span id="firstname">Arnaud</span>
+    <span id="lastname">Viala</span>
+  </h1>
+  
+  <section id="job">
+    <h2 class="title">Embedded Software Development Engineer</h2>
+    <span class="subtitle">&gt;12 years of experience</span>
+  </section>
+  
+  <section id="contact"><h4>Contact</h4>
+    <ul>
+    <li class="fulladdress"><i class="ico ico-location"><label>address:</label></i>1078 Logan Avenue - Toronto ON M4K 3G4</li>
+    <li class="basedarea"><i class="ico ico-location"><label>address:</label></i>Greater Toronto Area, Canada</li>
+    <li class="email"><i class="ico ico-email"><label>email:</label></i>arnaud.viala&#64;gmail.com</li>
+    <!-- published online, I'd rather not put my phone number -->
+    <li class="phone phone-fr"><i class="ico ico-phone"><label>phone:</label></i>+33.6.??.??.??.??</li>
+    <li class="phone phone-ca"><i class="ico ico-phone"><label>phone:</label></i>647-???-???</li>
+    <li class="skype"><i class="ico ico-videocam"></i>(skype) arnaudviala</li>
+    <li class="linkedin"><i class="ico ico-share"><label>website:</label></i>
+      <a href="https://arnaudviala.github.io">arnaudviala.github.io</a><br/>
+      <i class="ico ico-blank"></i>
+      <a href="https://www.linkedin.com/in/arnaudviala">linkedin.com/in/arnaudviala</a></li>
+    </ul>
+  </section> <!-- CONTACT -->
+</header>
+
+
+<section id="catchphrase"><h4>Catch Phrase</h4>
+  <!-- &#173; is "discrationary hyphen" : only appears in wrapped word -->
+  <!--<p>After more than <strong>12 years of experience</strong> in
+    <strong>embedded-system development</strong> (digital TV, home networking)
+    and very interested in <strong>cyber-security</strong>, I'm willing to join
+    a new team where I can bring my skills in these two domains.</p>-->
+  <p><!--&nbsp;&nbsp;-->
+    Experienced engineer with a demonstrated history of working in the consumer
+    electronics domain. Particularly skilled in : <strong>embedded software
+    architecture</strong> • Linux • <strong>C/C++</strong> • web-based UI •
+    open-source integration • Android • networking protocols • <strong>cyber
+    security</strong></p>
+</section> <!-- CATCHPHRASE -->
+
+
+<div id="skills-n-keywords" class="flexbox">
+
+<section id="skills">
+  <h4>Skills</h4>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Technologically proficient</li>
+  <li><i class="ico"></i>Analytically minded</li>
+  <li><i class="ico"></i>Good relational qualities</li>
+  <li><i class="ico"></i>Autonomous</li>
+  <!-- don't use progressbar anymore
+  <li><label>Technical:</label> <progress value="9" max="10">9/10</progress></li>
+  <li><label>Relational:</label> <progress value="8" max="10">8/10</progress></li>
+  <li><label>Autonomy:</label> <progress value="9" max="10">9/10</progress></li>
+  -->
+  </ul>
+  <h4>Languages</h4>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>French (mother tongue)</li>
+  <li><i class="ico"></i>English (fluent)</li>
+  <li class="sep"></li>
+  <li><i class="ico"></i>Spanish & German<br/> (basic knowledge)</li>
+  <!-- other forms
+    > basic knowledge of German and Spanish
+    or
+    > German (basic knowledge)
+    > Spanish ("survival kit")
+    or
+    > Spanish & German
+      ("survival" knowledge)
+  -->
+  <!-- don't use progressbar anymore
+  <li><label>Anglais:</label><progress value="8" max="10">8/10</progress></li>
+  <li><label>Allemand:</label><progress value="3" max="10">3/10</progress></li>
+  -->
+  </ul>
+</section> <!-- SKILLS -->
+
+<section id="keywords"><h4>Keywords</h4>
+
+<ul class="w-label-7 keywords">
+<li><label>Languages:</label>
+  C, C++, Scripts Shell, Java ...<br/>
+  Javascript, HTML5, CSS</li>
+<li><label>Standard:</label>
+  CE/HTML, HbbTV, MPEG-2, H264, DVB, UPnP, ...</li>
+<li><label>Protocols:</label>
+  HTTP, WebSocket, SIP, TCP/IP, ...</li>
+<!--<li><label>Work env.:</label>
+  Linux, Windows</li>-->
+<li><label>Embedded OSes:</label>
+  Linux, STLinux, STM OS20/21</li>
+<li><label>Microprocessors:</label>
+  STM Chipsets: STi7167 &amp; STi710x (sh4) <br/>
+  ATI Xilleon 226 (mips) <br/>
+  Broadcom BCM2835 (arm)</li>
+<li><label>Tools:</label>
+  GIT, Make, GNU Tools, SVN<br/>
+  WireShark, tcpdump<br/><!--</li>
+<li><label>Applications:</label>-->
+  Eclipse, jEdit, Photoshop, Illustrator</li>
+<li><label>Open Source:</label>
+  WebKit, libCurl, eXosip, libwebsockets, ffmpeg, <!--linuxDVB,--> <br/>
+  linux kernel, u-boot, OpenEmbedded, DirectFB, ...</li>
+</ul>
+
+</section> <!-- SKILLS -->
+
+</div>
+
+
+
+<section id="experiences"><h4>Experiences</h4>
+
+<section class="xp xp-margin xp-margin-empl">
+  <p class="empl">
+    <span class="name">Elderis</span>
+    <span class="eff">(4<i class="ico ico-person"></i>, start-up)</span> :
+    <span class="desc">provider of connected services for the elderly people</span>
+    <p class="city">Grenoble, France</p>
+    <!--<p class="date">Jan.&nbsp;2011 - June&nbsp;2017<i>6&frac12; years</i></p>-->
+  </p>
+</section> <!-- XP:ELDERIS:EMPL -->
+
+<section class="xp xp-margin">
+  <p class="date">Jan.&nbsp;2011 - June&nbsp;2017<i>6&frac12; years</i></p>
+  <p class="job">Co-founder, Embedded software engineer</p>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Designed (lead developer) the firmware for a TV box that offers connected services to elderly</li>
+  <li><i class="ico"></i>Developed the web-based UI of the TV application,</li>
+  <li><i class="ico"></i>Conceived a communication protocol based on WebSocket + SSL,</li>
+  <li><i class="ico"></i>Implemented a VoIP service (using network-enabled cameras)</li>
+  <li><i class="ico"></i>Built a prototype Android application (with Apache Cordova framework)</li>
+  <li><i class="ico"></i>Installed and administrated the development server (GIT, bugtracker, wiki...)</li>
+  <!--<li><i class="ico"></i>... <i>(so many things to do in a start-up)</i></li>-->
+  </ul>
+  <ul class="keywords w-label">
+    <li><label>Keywords:</label>STi7167/STLinux, SIP, RTSP...</li>
+    <li><label>Open-source:</label>WebKit, Gtk, DirectFB, eXosip</li>
+  </ul>
+</section> <!-- XP:ELDERIS:JOB -->
+
+<section class="xp xp-margin">
+  <p class="date">Apr.&nbsp;2013 - May&nbsp;2014<i>~1 year</i></p>
+  <p class="job">Embedded development consultant (subcontractor)</p>
+  <p class="empl">
+    for <span class="name">Schneider Electric</span> <span class="city">(Grenoble, France)</span>,
+    <span class="desc">manufacturer of products for energy management and automation</span>
+  </p>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Refactored the entire code base to improve the modularity and reusability</li>
+  <li><i class="ico"></i>Discovered and fixed a critical vulnerability breach</li>
+  <li><i class="ico"></i>Designed a diagnostic data exchange between industrial machines and an Augmented Reality app<!--lication--></li>
+  <li><i class="ico"></i>Reported the software memory footprint of the prototype</li>
+  </ul>
+  <ul class="keywords w-label">
+    <li><label>Keywords:</label>RESTful, ModBus, Raspberry-Pi, VxWorks</li>
+  </ul>
+</section> <!-- XP:ELDERIS:SCHNEIDER -->
+
+
+
+<div class="pagebreak pagebreak-header"><script type="text/javascript">document.write( populate_header() );</script></div>
+
+
+<section class="xp xp-margin xp-margin-empl">
+<p class="empl">
+  <span class="name">Iwedia Technologies</span>
+  <span class="eff">(~80<i class="ico ico-person"></i>)</span> :
+  <span class="desc">provider of software solutions for connected TV devices</span>
+  <p class="city">Rennes, France</p>
+</p>
+</section> <!-- XP:IWEDIA:EMPL -->
+
+
+<section class="xp xp-margin">
+  <p class="date">Sept.&nbsp;2004 - Dec.&nbsp;2010<i>6 years &frac13;</i></p>
+  <p class="job">Embedded software engineer</p>
+  <p class="summ">Within the R&amp;D department, working on the TV Box firmware (the flagship product) :</p>
+
+  <ul class="project">
+  <li><i class="ico"></i><i class="name">Web Browser</i> integration project</li>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Integrated the open-source WebKit library</li>
+  <li><i class="ico"></i>Developed plugins code base to comply with CE/HTML and HbbTV standards</li>
+  <li><i class="ico"></i>Designed a prototype of TV User-Interface using web standards</li>
+  </ul>
+  </ul>
+
+  <ul class="project">
+  <i class="ico"></i><i class="name">Media Center</i> extension to play audio-video content
+    (from USB or home network)
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Integrated an open-source UPnP/DLNA library (Platinum)</li>
+  </ul>
+  </ul>
+
+  <ul class="project">
+  <i class="ico"></i><i class="name">Linux</i> projects : migration to support the Linux
+    OS and its ecosystem
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Ported the hardware-abstraction module on top of Linux and Posix standard</li>
+  <li><i class="ico"></i>Adapted product's build system (makefiles) to support Linux OS</li>
+  <li><i class="ico"></i>Modified the open-source "u-boot" bootloader to support several platforms</li>
+  </ul>
+  </ul>
+
+  <ul class="project">
+  <li><i class="ico"></i><i class="name">Digital Video Recorder</i> allowing the
+  end-user to record and play live TV streams to/from hard-drives</li>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Designed a modular code architecture handling
+    audio-video streams</li>
+  <li><i class="ico"></i>Added support for USB storage devices</li>
+  </ul>
+  </ul>
+</section> <!-- XP:IWEDIA:JOB-1 -->
+
+
+<section class="xp xp-margin dont-show">
+  <p class="job">Intern, Software Development Engineer</p>
+  <p class="date">Feb.&nbsp;2004 - Aug.&nbsp;2004<i>6 months</i></p>
+  <!--<p class="summ">In the R&D unit, the goal of the internship was to study some
+    open-source software and their integration on TV/STB embedded systems.</p>-->
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Studied how to port some open-source software on TV/STB embedded systems</li>
+  <li><i class="ico"></i>Developed tools to manipulate (extraction, injection) MPEG2-TS audio/video streams</li>
+  </ul>
+  <ul class="keywords w-label">
+  <li><label>Skills:</label>ANSI C, Linux...</li>
+  <li><label>Standards:</label>UPnP, MPEG2, UDP/RTP, TCP/IP...</li>
+  <li><label>Open-source:</label>VideoLAN, lwIP...</li>
+  </ul>
+</section> <!-- XP:IWEDIA:STAGE -->
+
+
+
+
+
+<section class="xp xp-margin xp-margin-empl dont-show">
+<p class="empl">
+  <span class="name">CNRS Géoscience<i style="display:none;">(Centre National de la Recherche Scientifique)</i></span>
+  <span class="eff">(~30<i class="ico ico-person"></i>)</span> :
+  <span class="desc">geology research unit (in french National Center for Scientific Research)</span>
+  <p class="city">Rennes, France</p>
+</p>
+</section> <!-- XP:CNRS:EMPL -->
+
+<section class="xp xp-margin dont-show">
+  <p class="date">Jul.&nbsp;2003 - Aug.&nbsp;2003<i>2 months</i></p>
+  <p class="job">Study Engineer Intern</p>
+  <p class="summ">Within a team of researchers and engineers conducting geology
+      laboratory experiments :</p>
+  <ul class="w-icons w-ico-next">
+  <li><i class="ico"></i>Studied the technical capabilities of RSAutomation acquisition station</li>
+  <li><i class="ico"></i>Developed a C++ tools library to control sensors and actuators<br>
+    &nbsp;&nbsp;&nbsp;aimed at simplifying experiments programs written by researchers</li>
+  <li><i class="ico"></i>Presented the library in a 20 min. talk with use-case examples</li>
+  </ul>
+  <ul class="keywords w-label">
+  <li><label>Skills:</label>C++, embedded development, electronics...</li>
+  <li><label>Platform:</label>x86 clone, Windows CE...</li>
+  </ul>
+</section> <!-- XP:CNRS:STAGE -->
+
+</section> <!-- EXPERIENCES -->
+
+
+
+<!--
+<div class="pagebreak pagebreak-header"><script type="text/javascript">document.write( populate_header() );</script></div>
+-->
+
+
+<section id="studies"><h4>Studies</h4>
+
+  <section class="study study-t">
+    <p class="title"><i class="ico ico-school"></i>Engineer in Computer Science</p>
+    <p class="title-canada">(canadian equivalent ~ <i>Master's degree in Computer Engineering</i>)
+    <p class="school">
+      <span class="name">INSA Rennes <i>(Institut National de Sciences Appliquées de Rennes)</i></span> <!--:
+      <span class="desc">école d'ingénieur généraliste</span>--></p>
+    <!--<p class="date">Sept.&nbsp;1999 - Aug.&nbsp;2004 // <i>5 years</i></p>
+    <p class="city">Rennes, France</p>-->
+    <p class="city">Rennes, France &nbsp;&nbsp;  &nbsp;&nbsp; Sept.&nbsp;1999 - Aug.&nbsp;2004 // <i>5 years</i></p>
+  </section> <!-- ST:INSA -->
+
+  <section class="study study-t todo" id="study-bac-s">
+    <p class="title"><i class="ico ico-school"></i>Baccalauréat Scientifique, mention Bien</p>
+    <p class="title-canada"><!-- équivalent canadien : -->~ <i>Diplôme d'Études Collégiales</i>
+    <p class="school">
+      <span class="name">Lycée Saint-François</span></p>
+    <p class="city">Alençon, France  //  June 1999</p>
+  </section> <!-- ST:LYCEE -->
+
+</section> <!-- STUDIES -->
+
+
+
+<section id="personal-experiences"><h4>Personal Projects</h4>
+
+<!-- Les projets techniques n'intéressaient guère à l'IRCC, mais peut-être les employeurs -->
+<ul class="w-icons w-ico-next">
+<li class="pers-xp"><i class="ico"></i>hands-on experience building AOSP for a TV box board
+<div>board "ODroid C2", powered by an ARM Cortex-A53</div>
+</li>
+<li class="pers-xp"><i class="ico"></i>“MyZamis” <sup class="tm">[2006]</sup> : social network website to organize events
+<div>HTML, JS(Ajax), CSS, PHP/MySQL, Drupal</div>
+</li>
+<li class="pers-xp"><i class="ico"></i>“mp3car” <sup class="tm">[2001]</sup> : homemade mp3 station embedded in a car
+<div>Electronics, Linux, Open-Source</div>
+</li>
+<!--<li class="pers-xp"><i class="ico"></i>various websites for associations or individuals
+<div>Wordpress (PHP), Bootstrap, computer graphics (creation)</div>-->
+</li>
+</ul>
+
+</section> <!-- PERSONAL-EXPERIENCES -->
+
+<section id="activities-interests"><h4>Activities / Interests</h4>
+
+<ul class="keywords w-label-3">
+  <li>Woodworking, "DoItYourself", Ecology, Nature <!--(sous forme d'icônes)--></li>
+  <li><label>Sports:</label>Ski, Tennis, Sailing</li>
+  <li><label>Tech:</label>Computer graphics, Cyber Security, Web Technologies</li>
+</ul>
+
+<section class="xp xp-margin">
+<p class="job">Volunteering</p>
+<p class="summ">
+  in <span class="empl"><span class="name">Le Jardin des Cairns</span></span> association : a collaborative
+  shared garden in the city center of Grenoble (France) promoting ecology
+  awareness and permaculture.</p>
+<p class="date">Juil.&nbsp;2012 - Today<i>6 years</i></p>
+
+<ul class="w-icons w-ico-next">
+<li><i class="ico"></i>Member of the supervisory board : regular opening, organization of events (training courses, parties...)</li>
+<li><i class="ico"></i>Referent of the section "Arrangement" : landscaping projects, wood arrangements...</li>
+</ul>
+
+</section> <!-- XP:JDC -->
+
+</section> <!-- ACTIVITIES-INTERESTS -->
+
+
+
 </body>
 </html>
 

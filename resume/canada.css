@@ -1,0 +1,430 @@
+/* TODO: This file is a huge mess, more a "chimère"
+ *    unstructured, created from a merge of "paging.css" and previous "canada.css"
+ *    and copying-pasting some other pieces of css.
+ *
+ * Avoid doing modifications in this file...
+ */
+
+/*
+ * from old "paging.css"
+ */
+
+i.ico {
+  vertical-align: -0.1cm;
+  font-size: 120%;
+  color: rgb(150,150,150);
+  margin: 0;
+}
+i.ico-key {
+  color: #3e93db;
+  margin-right: 0.15cm;
+}
+.study .title i.ico {
+  margin-right: 0.15cm;
+}
+
+h4 {
+  border-bottom: 1px dotted rgb(100,100,100);
+  margin: 0px;
+  font-size: 100%;
+  margin-bottom: 0.2cm;
+}
+h4::after {
+  content: ":";
+}
+
+sup.tm {
+  font-size: 60%;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+li progress {
+  width: 6.5em;
+  height: 1em;
+  float: right;
+  -webkit-appearance: none;
+  /*appearance: none;*/
+  color: blue;
+}
+progress[value]::-webkit-progress-bar {
+  border-radius: 2px;
+  background-color: #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #3e93db, #3e93db);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+#lastname {
+  color: #3e93db;
+}
+#name {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#contact {
+  border-left: 1px dotted rgb(100,100,100);
+}
+
+#contact ul {
+  margin: 0;
+  padding: 0;
+}
+
+#contact i.ico {
+  margin-right: 0.25ex;
+}
+
+#contact .phone.phone-ca ,
+#contact .email {
+  letter-spacing: 1px;
+}
+li {
+  margin-bottom: 0.1cm;
+}
+li.sep { /* for separator */
+  opacity:1.0;
+  height:0.2cm;
+  margin:0;
+}
+/*li:last-of-type {
+  margin-bottom: 0;
+}*/
+
+#contact h4 {
+  display: none;
+}
+
+section {
+  padding: 0;
+}
+
+#motscles li {
+  list-style-type: disc;
+}
+
+
+.xp {
+  margin-bottom: 1em;
+}
+.xp .job,
+.xp .empl .name {
+  font-weight: bold;
+}
+.xp .empl .name {
+  color: #3e93db;
+}
+
+.xp li {
+  margin-bottom: 0;
+}
+.xp-basic .empl,
+.xp-basic .job {
+  display: inline;
+}
+.xp-basic .eff,
+.xp-basic .desc,
+.xp-basic .date i,
+.xp-basic .keyw {
+  display: none ! important;
+} 
+.xp-basic .date ,
+.xp-basic .city {
+  padding-left: 0.63cm;
+  font-size: 90%;
+}
+.xp-basic .date i {
+  display: none;
+}
+
+.xp-margin {
+  position: relative;
+  padding-left: 4.5rem;
+}
+.xp-margin .date {
+  color: rgb(150,150,150);
+  display: block;
+  font-size: x-small;
+  width: 3.9rem;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  border-right: 1px dotted #AAA;
+}
+.xp-margin .date i {
+  margin-top: 0.2cm;
+  display: block;
+}
+.xp-margin .city {
+  font-size: 90%;
+}
+
+
+
+/*
+ * "study-s" is the class for item where school is the main info
+ * "study-t" is the class for item where title is the main info
+ */
+.study-s .school .name,
+.study-t .title
+{
+  font-weight: bold;
+}
+.study-s .school .name i,
+.study-t .title .name i
+{
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.study > p {
+  padding-left: 0.63cm;
+}
+.study-s .school ,
+.study-s .title , /* remove padding for the icon */
+.study-t .title {
+  padding-left: 0cm;
+}
+
+.study .date ,
+.study .city ,
+.study .title-canada {
+  /*padding-left: 0.63cm;*/
+  font-size: 90%;
+}
+
+#experiences-personelles li div,
+li.pers-xp div {
+  margin-left: 1cm;
+  margin-bottom: 0.15cm;
+}
+
+h4 {
+  border-bottom-style: solid;
+}
+#contact {
+  border-left-style: solid;
+}
+.xp-margin .date {
+  border-right-style: solid;
+}
+
+/*
+ * from original "canada.css"
+ */
+
+
+
+/* remove plenty of informations from classic CV */
+#photo,
+/*#job,*/
+#datebirth,
+#age,
+/*#age-xp,*/
+#basedcity, #basedarea, #tr-basedcity,
+/*#fulladdress,*/ #tr-fulladdress,
+#profil, #outils, #interets, #motscles
+{
+  display: none ! important;
+}
+
+header {
+  position: relative;
+}
+/* disable default margin/padding for some headers */
+header #name ,
+#job .title {
+  margin: 0;
+  padding: 0;
+}
+#job {
+  position: absolute;
+  right: 0cm;
+  top: 0cm;
+  text-align: right; 
+}
+#job .title {
+  display: block;
+  font-weight: normal;
+}
+#name,
+#job .title {
+  font-size: x-large;
+}
+#contact {
+  border: none;
+  font-size: smaller;
+  position: absolute;
+}
+
+section h4 ,
+#catchphrase {
+  margin-top: 0.5cm;
+}
+#catchphrase h4 {
+  display: none;
+}
+
+
+
+#catchphrase {
+  padding-left: 14rem;
+  margin-top: 1cm;
+}
+/* those rules are common with #profil [...] in france.css */
+#catchphrase > p {
+  text-align: justify;
+}
+#catchphrase > p strong {
+  font-weight: 500;
+  color: #3e93db;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+#skills-n-keywords {
+  flex-direction: row-reverse;
+}
+#skills-n-keywords #skills {
+  width: 30%;
+}
+#skills-n-keywords #keywords {
+  width: 65%;
+}
+/* <progress> has to be a bit smaller */
+#skills progress {
+  width: 5.5em;
+}
+
+#studies > .study ~ .study { /* apply to all .study elements except first one */
+  margin-top: 0.25cm;
+}
+
+#study-bac-s {
+  display: none;
+}
+
+
+
+#keywords ul {
+  margin: 0;
+}
+
+
+.xp-margin {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.xp-margin-empl {
+  padding-left: 0rem;
+  margin-top: 1.5rem;
+}
+.xp-margin .date {
+  top: 0px;
+  left: auto;
+  right: 0px;
+  width: auto;
+  text-align: right;
+  border: none;
+  font-size: 80%;
+}
+.xp-margin .date i {
+  display: inline;
+  padding-left: 1rem;
+}
+
+.xp-margin > .w-icons {
+  margin-top: 0.15rem;
+}
+
+.xp-margin .summ {
+  margin-top: 0.25rem;
+}
+
+ul.keywords {
+  margin: 0;
+  padding: 0;
+}
+.xp-margin ul.keywords {
+  padding-top: 0.15rem;
+  margin-left: 0.35rem;
+}
+ul.keywords li label {
+  font-size: 80%;
+  opacity: 0.75;
+  display: inline-block;
+  margin-top: 0.15rem; /* to compensate smaller font in an "absolute" positionning */
+}
+
+
+
+#personal-experiences {
+  margin-left: 0.35rem;
+}
+#activities-interests ul.keywords {
+  margin-left: 1.35rem;
+}
+#activities-interests ul.keywords li i {
+  width: 3rem; /* max is "Sports: " */
+}
+
+#activities-interests .xp {
+  margin-top: 1rem;
+  padding-left: 0rem;
+}
+
+
+.project {
+  margin: 0;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+.project > .w-icons {
+  margin-top: 0.15rem;
+}
+/* not used right now, <ul class="project"> does not have "w-icons" class
+.project.w-icons > .ico::after,
+.project.w-icons > li > .ico::after {
+  content: "expand_more";
+  padding-right: 0.2rem;
+}
+*/
+.project .name {
+  font-style: italic;
+  padding-right: 0.2rem;
+}
+.project .name::before { content: "\""; }
+.project .name::after { content: "\""; }
+
+
+/* custom style for page-header can be written here
+ * but the fact that it's hidden on screen and displayed when printed
+ * SHALL be set in "paging.css" and "printing.css"
+ */
+div.pagebreak-header {
+  opacity: 0.75;
+  border-bottom: 1px solid #888;
+  font-size: 90%;
+}
+div.pagebreak-header .name {
+  font-weight: bold;
+}
