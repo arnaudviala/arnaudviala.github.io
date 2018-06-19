@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<!-- very basic CSS rules (common to everything) -->
+<link rel="stylesheet" type="text/css" href="base.css">
+
+<link rel="stylesheet" type="text/css" href="w-style.css">
+
+<link rel="stylesheet" type="text/css" href="font-roboto.css"
+      oldhref="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+
+<link rel="stylesheet" type="text/css" href="material-icons.css"
+      oldhref="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" type="text/css" href="paging.css">
+<link rel="stylesheet" type="text/css" href="printing-letter.css" media="print">
+<link rel="stylesheet" type="text/css" href="printing.css" media="print">
+
+<link rel="stylesheet" type="text/css" href="vcards.css">
+
+<!-- the title is used to create a default name when printing to PDF -->
+<title>VCardsVertical_ArnaudViala</title>
+
+<script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="private-data.js"></script>
+
+<script>
+// populate the 'vcards' DOM elements
+$(function() {
+  var vcards = $('#vcards');
+  var pattern_str = vcards.data("pattern");
+  var pattern_i = parseInt(pattern_str);
+  if ( ""+pattern_i == pattern_str )
+  {
+    // 'pattern_i' is a integer number
+    // we have to repeat the first '.vcard'
+    var vcard = vcards.children(".vcard").first();
+    for( var i=1 ; i<pattern_i ; i++ )
+    {
+      vcard.clone().appendTo( vcards );
+    }
+  }
+  else
+  {
+    // TODO: other types of pattern not handled yet
+  }
+});
+</script>
+</head>
+<body>
+
+<div class="page page-us single-page">
+
+  <div id="vcards" data-pattern="9" class="w-flex-sb">
+    
+  <div class="vcard vertical w-padding">
+
+    <h1 id="name">
+      <span id="firstname">Arnaud</span>
+      <span id="lastname">Viala</span>
+    </h1>
+    
+    <section id="contact"><h4>Contact</h4>
+      <ul class="w-icons">
+      <li class="fulladdress dont-show"><i class="ico ico-location"><label>address:</label></i>1078 Logan Avenue - Toronto ON M4K 3G4</li>
+      <li class="basedarea dont-show"><i class="ico ico-location"><label>address:</label></i>Greater Toronto Area, Canada</li>
+      <li class="email"><i class="ico ico-email"><label>email:</label></i>arnaud.viala&#64;gmail.com</li>
+      <li class="phone phone-fr dont-show"><i class="ico ico-phone"><label>phone:</label></i><span class="private-data" data-index="phone-fr">+33.6.??.??.??.??</span></li>
+      <li class="phone phone-ca"><i class="ico ico-phone"><label>phone:</label></i><span class="private-data" data-index="phone-ca">647-???-????</span></li>
+      <li class="skype dont-show"><i class="ico ico-videocam"></i>(skype) arnaudviala</li>
+      <li class="linkedin"><i class="ico ico-links"><label>website:</label></i>
+        <!--<a href="https://arnaudviala.github.io">arnaudviala.github.io</a><br/>
+        <i class="ico ico-blank"></i>-->
+        <a href="https://www.linkedin.com/in/arnaudviala">linkedin.com/in/arnaudviala</a></li>
+      </ul>
+    </section> <!-- CONTACT -->
+    
+    <section id="job">
+      <h2 class="title">Engineer<br/> <i>in</i> Embedded&nbsp;Software Development</h2>
+      <span class="subtitle">12+ years of experience</span>
+    </section>
+
+    <!-- QR code using "chart.googleapis.com",
+           thanks to "https://www.qr-code-generator.com/"
+      See documentation (deprecated but valid) at :
+          https://developers.google.com/chart/infographics/docs/qr_codes
+        -->
+    <img class="dont-show"
+        src="https://chart.googleapis.com/chart?cht=qr&chs=60x60&chld=L|2&chl=linkedin.com%2Fin%2Farnaudviala"
+        style="position:absolute;top:0px;right:0px;margin:0.08in;width:1.5cm;"
+        alt="" />
+    <!--<img src="https://chart.googleapis.com/chart?cht=qr&chl=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AViala%3BArnaud%0AFN%3AArnaud%20Viala%0AORG%3A%0ATITLE%3A%0AADR%3A%3B%3B%3B%3B%3B%3B%0ATEL%3BWORK%3BVOICE%3A%0ATEL%3BCELL%3A647-739-5408%0ATEL%3BFAX%3A%0AEMAIL%3BWORK%3BINTERNET%3Aarnaud.viala%40gmail.com%0AURL%3Alinkedin.com%2Fin%2Farnaudviala%0ABDAY%3Aundefined%0AEND%3AVCARD%0A&chs=120x120&choe=UTF-8&chld=L|2"
+        style="position:absolute;bottom:0px;" rel="nofollow" alt="">-->
+
+    <section id="catchphrase"><h4>Catch Phrase</h4>
+      <p class="keywords">
+        <strong>embedded Linux</strong>
+        <!--• web-based UI-->
+        • open-source integration
+        • software architecture
+        • <strong>C/C++</strong>
+        • Android
+        • networking protocols
+        • cyber security
+        • <strong>HTML5/JS/CSS</strong>
+      </p>
+    </section> <!-- CATCHPHRASE -->
+    
+  </div>
+  <!--
+  <div class="vcard vertical w-padding">Coucou</div>
+  <div class="vcard vertical">Without padding</div>
+  <div class="vcard vertical">(blank)</div>
+  <div class="vcard w-padding">Coucou</div>
+  <div class="vcard">Without padding</div>
+  -->
+  
+  </div>
+    
+</div><!-- PAGE -->
+</body>
+</html>

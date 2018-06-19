@@ -19,6 +19,15 @@
   width: 3.25in;
   height: 1.75in;
 }
+.vcard.vertical {
+  width: 2in;
+  height: 3.5in;
+}
+.vcard.vertical.w-padding {
+  width: 1.75in;
+  height: 3.25in;
+  height: 3in;  /* a little bit shorter */
+}
 
 
 .vcard .ico {
@@ -63,6 +72,19 @@ h1#name {
   font-style: normal;
   opacity: 0.25;
 }
+.vcard.vertical #job {
+  text-align: center;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  width: 105%;
+  margin-left: -0.05in;
+}
+.vcard.vertical #job .subtitle {
+  display: block;
+  padding-top: 0.5em;
+  padding-bottom: 2.1em;
+}
+
 
 
 #contact h4 ,
