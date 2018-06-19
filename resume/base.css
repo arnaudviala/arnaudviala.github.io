@@ -1,3 +1,13 @@
+/* If a element has the class "dont-show", it means we don't
+ * want it to be visible. Mostly a "display:none;" would be enough.
+ *
+ *  note: sometimes it's good to comment this rule to discover
+ *        fossiles that should be completely wiped out.
+ */
+.dont-show {
+  display: none;
+}
+
 /* an <li> element with class="sep" is just a separator
  * some other CSS might decorate by changing its height, display a line
  * but the strict minimum is to hide the bullet and the content */
