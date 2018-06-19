@@ -1,0 +1,82 @@
+.vcard {
+  border: 1px dotted grey;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+
+/* A standard business card is 3.5" x 2", plus a bleed area of 1/8"
+ *    According to:
+ *    https://www.printingforless.com/Business-Card-Specifications.html 
+ */
+  width: 3.5in;
+  height: 2in;
+  margin: 0.125in;
+
+  font-size: 0.7rem;
+}
+.vcard.w-padding {
+  padding: 0.125in;
+  width: 3.25in;
+  height: 1.75in;
+}
+
+
+.vcard .ico {
+  font-size: 12px;
+  line-height: 1.3;
+
+  vertical-align: -0.1cm;
+  font-size: 100%;
+  color: rgb(150,150,150);
+  margin: 0;
+}
+
+
+#lastname {
+  color: #3e93db;
+}
+#catchphrase > p strong {
+  font-weight: 500;
+  color: #3e93db;
+}
+
+h1#name ,
+#job h2 {
+  margin: 0;
+}
+h1#name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#job {
+  /*position: absolute;
+  top: 0.3cm;
+  right: 0.125in; /* same as padding */
+  text-align: right;
+}
+#job h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+#job h2 i {
+  font-style: normal;
+  opacity: 0.25;
+}
+
+
+#contact h4 ,
+#catchphrase h4 {
+  display: none;
+}
+
+#catchphrase p.keywords {
+  margin-top: 1em;
+  text-align: center;
+}
+
+#contact .phone.phone-ca ,
+#contact .email {
+  letter-spacing: 1px;
+}
+

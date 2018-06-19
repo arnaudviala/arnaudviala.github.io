@@ -5,7 +5,7 @@
  * that its <LI> children would contain icons. The goal is to
  * get content aligned after an 'icon-margin"
  */
- ul.w-icons {
+ul.w-icons {
   margin: 0;
   padding: 0;
   position: relative;
@@ -14,6 +14,11 @@
 ul.w-icons > li > i.ico {
   position: absolute;
   left: 0px;
+}
+ul.w-icons li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Class "w-ico-next"    HAS TO BE defined in material-icons.css
@@ -59,3 +64,10 @@ ul.w-icons > li > i.ico {
  ul.w-label-7 li label {
    width: 7rem;
  }
+
+/* for now, we create just a shortcut to have "flex" and "space-between" */
+.w-flex-sb {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
