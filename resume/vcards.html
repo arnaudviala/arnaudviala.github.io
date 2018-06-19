@@ -26,8 +26,10 @@
 <title>VCard_ArnaudViala</title>
 
 <script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="private-data.js"></script>
 
 <script>
+// populate the 'vcards' DOM elements
 $(function() {
   var vcards = $('#vcards');
   var pattern_str = vcards.data("pattern");
@@ -67,9 +69,8 @@ $(function() {
       <li class="fulladdress"><i class="ico ico-location"><label>address:</label></i>1078 Logan Avenue - Toronto ON M4K 3G4</li>
       <li class="basedarea"><i class="ico ico-location"><label>address:</label></i>Greater Toronto Area, Canada</li>
       <li class="email"><i class="ico ico-email"><label>email:</label></i>arnaud.viala&#64;gmail.com</li>
-      <!-- published online, I'd rather not put my phone number -->
-      <!--<li class="phone phone-fr"><i class="ico ico-phone"><label>phone:</label></i>+33.6.??.??.??.??</li>-->
-      <li class="phone phone-ca"><i class="ico ico-phone"><label>phone:</label></i>647-???-????</li>
+      <!--<li class="phone phone-fr"><i class="ico ico-phone"><label>phone:</label></i><span class="private-data" data-index="phone-fr">+33.6.??.??.??.??</span></li>-->
+      <li class="phone phone-ca"><i class="ico ico-phone"><label>phone:</label></i><span class="private-data" data-index="phone-ca">647-???-????</span></li>
       <!--<li class="skype"><i class="ico ico-videocam"></i>(skype) arnaudviala</li>-->
       <li class="linkedin"><i class="ico ico-links"><label>website:</label></i>
         <!--<a href="https://arnaudviala.github.io">arnaudviala.github.io</a><br/>
