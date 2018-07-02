@@ -13,22 +13,19 @@ body {
   width: 3.5in;
   height: 2in;
   margin: 0.125in;
+  box-sizing: border-box;
 
   font-size: 0.7rem;
 }
 .vcard.w-padding {
   padding: 0.125in;
-  width: 3.25in;
-  height: 1.75in;
 }
 .vcard.vertical {
   width: 2in;
   height: 3.5in;
 }
 .vcard.vertical.w-padding {
-  width: 1.75in;
-  height: 3.25in;
-  height: 3in;  /* a little bit shorter */
+  height: 3.25in;  /* a little bit shorter */
 }
 
 
