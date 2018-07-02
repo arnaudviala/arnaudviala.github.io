@@ -2,6 +2,9 @@
 <head>
 <meta charset="UTF-8" />
 
+<link rel="stylesheet" type="text/css" href="css4print-0.1.0/paging.css">
+<style type="text/css">@page{ size: letter; }</style>
+
 <!-- very basic CSS rules (common to everything) -->
 <link rel="stylesheet" type="text/css" href="base.css">
 
@@ -12,10 +15,6 @@
 
 <link rel="stylesheet" type="text/css" href="material-icons.css"
       oldhref="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-<link rel="stylesheet" type="text/css" href="paging.css">
-<link rel="stylesheet" type="text/css" href="printing-letter.css" media="print">
-<link rel="stylesheet" type="text/css" href="printing.css" media="print">
 
 <link rel="stylesheet" type="text/css" href="vcards.css">
 
@@ -50,7 +49,7 @@ $(function() {
 </head>
 <body>
 
-<div class="page page-us single-page">
+<div class="page page-letter single-page">
 
   <div id="vcards" data-pattern="9" class="w-flex-sb">
 
