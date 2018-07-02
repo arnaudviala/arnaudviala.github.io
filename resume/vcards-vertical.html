@@ -29,25 +29,21 @@
   data-ref=".page" data-unit="cm" data-autoshow="none"></script>
 
 <script>
-// populate the 'vcards' DOM elements
 $(function() {
-  var vcards = $('#vcards');
-  var pattern_str = vcards.data("pattern");
-  var pattern_i = parseInt(pattern_str);
-  if ( ""+pattern_i == pattern_str )
-  {
-    // 'pattern_i' is a integer number
-    // we have to repeat the first '.vcard'
-    var vcard = vcards.children(".vcard").first();
-    for( var i=1 ; i<pattern_i ; i++ )
+  // clone() every DOM element which has a "data-clone" attribute
+  $("[data-clone]").each( function(i,elem) {
+    var clone = $(elem).data("clone");
+    var count = parseInt(clone);
+    if ( ""+count == clone )  // data-clone attr is a pure integer
     {
-      vcard.clone().appendTo( vcards );
+      $(elem).removeData("clone").removeAttr("data-clone");
+      for( var i=1 ; i<count ; i++ )
+      {
+        $(elem).clone().insertAfter( $(elem) );
+      }
     }
-  }
-  else
-  {
-    // TODO: other types of pattern not handled yet
-  }
+    // else { ... } other formats for "data-clone" attribute ?
+  });
 });
 </script>
 </head>
@@ -55,9 +51,9 @@ $(function() {
 
 <div class="page page-letter single-page">
 
-  <div id="vcards" data-pattern="9" class="w-flex-sb">
+  <div id="vcards" class="w-flex-sb">
 
-  <div class="vcard vertical w-padding">
+  <div class="vcard vertical w-padding" data-clone="9">
 
     <h1 id="name">
       <span id="firstname">Arnaud</span>
