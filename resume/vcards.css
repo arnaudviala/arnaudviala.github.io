@@ -2,7 +2,6 @@ body {
   font-family: Roboto;
 }
 .vcard {
-  border: 1px dotted grey;
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -105,3 +104,10 @@ h1#name {
   letter-spacing: 1px;
 }
 
+/* bugfix for crop-lines.css
+ * the background-color:inherit; causes problem when printing
+ * because the page is transparent by default for @media print { .page {...} }
+ */
+.crop-mask {
+  background-color: white;
+}

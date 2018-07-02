@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="css4print-0.1.0/paging.css">
 <link rel="stylesheet" type="text/css" href="css4print-0.1.0/rulers.css">
+<link rel="stylesheet" type="text/css" href="css4print-0.1.0/crop-lines.css">
 <style type="text/css">@page{ size: letter; }</style>
 
 <!-- very basic CSS rules (common to everything) -->
@@ -46,14 +47,17 @@ $(function() {
   });
 });
 </script>
+
+<!-- /!\ The script "crop-lines.js" must be included after the script that will
+         clone business cards. -->
+<script type="text/javascript" src="css4print-0.1.0/crop-lines.js"
+  data-selector=".cropped" data-parent-selector=".page"></script>
 </head>
 <body>
 
-<div class="page page-letter single-page">
+<div class="page page-letter single-page w-flex-sb">
 
-  <div id="vcards" class="w-flex-sb">
-
-  <div class="vcard vertical w-padding" data-clone="9">
+  <div class="vcard vertical w-padding cropped" data-clone="9">
 
     <h1 id="name">
       <span id="firstname">Arnaud</span>
@@ -105,15 +109,6 @@ $(function() {
         • <strong>HTML5/JS/CSS</strong>
       </p>
     </section> <!-- CATCHPHRASE -->
-
-  </div>
-  <!--
-  <div class="vcard vertical w-padding">Coucou</div>
-  <div class="vcard vertical">Without padding</div>
-  <div class="vcard vertical">(blank)</div>
-  <div class="vcard w-padding">Coucou</div>
-  <div class="vcard">Without padding</div>
-  -->
 
   </div>
 
