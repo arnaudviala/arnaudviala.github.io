@@ -2,21 +2,22 @@
 <head>
 <meta charset="UTF-8" />
 
+<link rel="stylesheet" type="text/css" href="css4print-0.1.0/paging.css">
+<link rel="stylesheet" type="text/css" href="css4print-0.1.0/rulers.css">
+
 <!-- very basic CSS rules (common to everything) -->
 <link rel="stylesheet" type="text/css" href="base.css">
 
 <link rel="stylesheet" type="text/css" href="w-style.css">
 
-<!--  -->
 <link rel="stylesheet" type="text/css" href="font-roboto.css"
       oldhref="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
 
 <link rel="stylesheet" type="text/css" href="material-icons.css"
       oldhref="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<link rel="stylesheet" type="text/css" href="paging.css">
 <link rel="stylesheet" type="text/css" href="canada.css">
-<link rel="stylesheet" type="text/css" href="printing-letter.css" media="print">
+<style type="text/css">@page { size: letter; }</style>
 <link rel="stylesheet" type="text/css" href="printing.css" media="print">
 
 <!-- the title is used to create a default name when printing to PDF -->
@@ -24,6 +25,10 @@
 
 <script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
 <script type="text/javascript" src="private-data.js"></script>
+
+<script type="text/javascript" src="css4print-0.1.0/rulers.js"
+  data-ref=".page" data-unit="cm" data-autoshow="none"></script>
+
 
 <script type="text/javascript">
 var page_counter = 1;
@@ -46,7 +51,7 @@ function populate_header()
 </head>
 <body>
 
-<div class="page page-us">
+<div class="page page-letter">
 
 <header>
   <h1 id="name">

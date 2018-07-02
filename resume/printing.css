@@ -1,18 +1,7 @@
 /* the @page at-rule is stored in printing-${format}.css files */
 
-body {
-  background: none;
-  background-color: white;
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.page {
-  border: none;
-  margin: 0;
-}
-
+/** some rules have been removed because
+ ** they are placed in css4print-0.1.0/paging.css **/
 
 /* disable the special color for "ToDo" and "ToAdapt" items */
 .todo,
@@ -61,8 +50,7 @@ progress[value]::-webkit-progress-value {
 
 
 div.pagebreak {
-  display: block;
-  page-break-before: always;
-  margin-top: 0.75cm;
+  margin-top: 1cm;
   margin-bottom: 0.75cm;
+  height: auto;
 }

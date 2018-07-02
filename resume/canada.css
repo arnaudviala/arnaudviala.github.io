@@ -5,6 +5,14 @@
  * Avoid doing modifications in this file...
  */
 
+body {
+  font-family: Roboto;
+}
+.page p {
+  margin: 0;
+  padding: 0;
+}
+
 /*
  * from old "paging.css"
  */
@@ -57,15 +65,15 @@ progress[value]::-webkit-progress-bar {
 }
 progress[value]::-webkit-progress-value {
   background-image:
-	   -webkit-linear-gradient(-45deg, 
-	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	   -webkit-linear-gradient(-45deg,
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%,
 	                           rgba(0,0, 0, .1) 66%, transparent 66%),
-	   -webkit-linear-gradient(top, 
-	                           rgba(255, 255, 255, .25), 
+	   -webkit-linear-gradient(top,
+	                           rgba(255, 255, 255, .25),
 	                           rgba(0, 0, 0, .25)),
 	   -webkit-linear-gradient(left, #3e93db, #3e93db);
 
-    border-radius: 2px; 
+    border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
@@ -142,7 +150,7 @@ section {
 .xp-basic .date i,
 .xp-basic .keyw {
   display: none ! important;
-} 
+}
 .xp-basic .date ,
 .xp-basic .city {
   padding-left: 0.63cm;
@@ -258,7 +266,7 @@ header #name ,
   position: absolute;
   right: 0cm;
   top: 0cm;
-  text-align: right; 
+  text-align: right;
 }
 #job .title {
   display: block;
