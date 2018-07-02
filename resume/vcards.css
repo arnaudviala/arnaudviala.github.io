@@ -24,9 +24,6 @@ body {
   width: 2in;
   height: 3.5in;
 }
-.vcard.vertical.w-padding {
-  height: 3.25in;  /* a little bit shorter */
-}
 
 
 .vcard .ico {
@@ -73,7 +70,7 @@ h1#name {
 }
 .vcard.vertical #job {
   text-align: center;
-  margin-top: 2.5em;
+  margin-top: 3.5em;
   margin-bottom: 1em;
   width: 105%;
   margin-left: -0.05in;
@@ -92,7 +89,7 @@ h1#name {
 }
 
 #catchphrase p.keywords {
-  margin-top: 1em;
+  margin-top: 2em;
   text-align: center;
 }
 
