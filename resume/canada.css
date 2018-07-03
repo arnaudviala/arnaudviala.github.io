@@ -432,11 +432,11 @@ ul.keywords li label {
  * but the fact that it's hidden on screen and displayed when printed
  * SHALL be set in "paging.css" and "printing.css"
  */
-div.pagebreak-header {
+div.pageheader div {
   opacity: 0.75;
   border-bottom: 1px solid #888;
   font-size: 90%;
 }
-div.pagebreak-header .name {
+div.pageheader .name {
   font-weight: bold;
 }

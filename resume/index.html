@@ -39,7 +39,7 @@ function populate_header()
   var jobtitle = $('#job .title').text();
   var pagenb = "page "+page_counter;
   var o = $('<div>')
-  .addClass("page-header flexbox")
+  .addClass("w-flex-sb")
   .append( $('<span class="name">').text(name) )
   .append( $('<span class="jobtitle">').text(jobtitle) )
   .append( $('<span class="page-nb">').text(pagenb) );
@@ -217,7 +217,12 @@ function populate_header()
 
 
 
-<div class="pagebreak pagebreak-header"><script type="text/javascript">document.write( populate_header() );</script></div>
+<!-- add "visible" to the two following elements to
+ make them appear in the browser -->
+<div class="pagebreak margin-left"></div>
+<div class="pageheader">
+<script type="text/javascript">document.write( populate_header() );</script>
+</div>
 
 
 <section class="xp xp-margin xp-margin-empl">

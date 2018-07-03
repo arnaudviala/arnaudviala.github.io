@@ -48,9 +48,9 @@ progress[value]::-webkit-progress-value {
 }
 
 
-
+/* handled directly in css4print-x.y.z/paging.css
 div.pagebreak {
   margin-top: 1cm;
   margin-bottom: 0.75cm;
   height: auto;
-}
+}*/
