@@ -45,9 +45,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* A <div class="pagebreak"> is taken care of only when printing */
-div.pagebreak {
-  display: none;
-}
-
